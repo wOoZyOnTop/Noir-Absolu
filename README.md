@@ -9,7 +9,7 @@ Self-contained AMOLED Discord theme collection with true-black `#000000` surface
 
 | Couleur / Color | Fichier / File | Accent |
 |---|---|---:|
-| Violet / Purple | [`Noir-Absolu.theme.css`](./Noir-Absolu.theme.css) | `#a970ff` |
+| Violet / Purple | [`Noir-Absolu-Violet.theme.css`](./Noir-Absolu-Violet.theme.css) | `#a970ff` |
 | Bleu / Blue | [`Noir-Absolu-Bleu.theme.css`](./Noir-Absolu-Bleu.theme.css) | `#52a8ff` |
 | Rouge / Red | [`Noir-Absolu-Rouge.theme.css`](./Noir-Absolu-Rouge.theme.css) | `#ff5c73` |
 | Orange / Orange | [`Noir-Absolu-Orange.theme.css`](./Noir-Absolu-Orange.theme.css) | `#ff8a3d` |
@@ -17,9 +17,6 @@ Self-contained AMOLED Discord theme collection with true-black `#000000` surface
 | Vert / Green | [`Noir-Absolu-Vert.theme.css`](./Noir-Absolu-Vert.theme.css) | `#39d98a` |
 | Cyan / Cyan | [`Noir-Absolu-Cyan.theme.css`](./Noir-Absolu-Cyan.theme.css) | `#35d0e6` |
 | Rose / Pink | [`Noir-Absolu-Rose.theme.css`](./Noir-Absolu-Rose.theme.css) | `#ff5fb2` |
-
-`Noir-Absolu.theme.css` reste le nom de la variante violette afin de préserver la compatibilité avec les installations existantes.  
-`Noir-Absolu.theme.css` remains the purple variant filename to preserve compatibility with existing installations.
 
 ## Fonctionnalités / Features
 
