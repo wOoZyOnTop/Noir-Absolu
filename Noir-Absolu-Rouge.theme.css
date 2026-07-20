@@ -4,7 +4,7 @@
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
  * @description Thème Discord AMOLED rouge, noir profond et lisible. / Readable true-black red AMOLED Discord theme.
- * @version 1.1.1
+ * @version 1.1.2
  */
 
 /*
@@ -248,6 +248,11 @@ body,
 
 #app-mount [data-list-id="guildsnav"] {
   background-color: var(--noir-panel) !important;
+}
+
+/* Socle des panneaux utilisateur et vocal : noir AMOLED jusque dans les marges. */
+#app-mount [class*="panels_"] {
+  background: var(--noir-amoled) !important;
 }
 
 /* Barre supérieure et séparateurs de structure. */
