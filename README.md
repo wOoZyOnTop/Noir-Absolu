@@ -47,12 +47,6 @@ Self-contained AMOLED Discord theme collection with true-black `#000000` surface
 3. Place the `*.theme.css` file in the themes folder.
 4. Enable only that variant.
 
-## Maintenance commune / Shared maintenance
-
-Les huit fichiers sont générés depuis [`Noir-Absolu.template.css`](./Noir-Absolu.template.css) avec [`Build-Themes.ps1`](./Build-Themes.ps1). Toute correction commune est effectuée une seule fois dans le modèle, puis propagée aux huit variantes. Les fichiers générés restent entièrement autonomes.
-
-All eight files are generated from [`Noir-Absolu.template.css`](./Noir-Absolu.template.css) with [`Build-Themes.ps1`](./Build-Themes.ps1). Shared Discord fixes are made once in the template and propagated to every variant. Generated themes remain fully self-contained.
-
 ## Crédits / Credits
 
 Créé par / Created by **woozyfps.**  
