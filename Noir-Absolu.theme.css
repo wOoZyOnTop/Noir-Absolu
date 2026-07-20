@@ -3,8 +3,8 @@
  * @author woozyfps.
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
- * @description Un thème Discord AMOLED local, noir profond, lisible et sans dépendance distante.
- * @version 1.0.4
+ * @description Un thème Discord AMOLED violet, noir profond, lisible et sans dépendance distante.
+ * @version 1.0.5
  */
 
 /*
@@ -13,28 +13,28 @@
  */
 :root {
   --noir-amoled: #000000;
-  --noir-panel: #020305;
-  --noir-surface: #07090d;
-  --noir-raised: #0d1016;
-  --noir-raised-hover: #151a22;
-  --noir-border: rgba(157, 178, 211, 0.12);
-  --noir-border-strong: rgba(157, 178, 211, 0.2);
-  --noir-hover: rgba(82, 168, 255, 0.07);
-  --noir-active: rgba(82, 168, 255, 0.12);
-  --noir-selected: rgba(82, 168, 255, 0.18);
-  --noir-accent: #52a8ff;
-  --noir-link: #69b4ff;
-  --noir-link-hover: #9ad2ff;
-  --noir-success: #3ddc97;
-  --noir-warning: #ffcc66;
-  --noir-danger: #ff647c;
-  --noir-text: #f6f7fb;
-  --noir-text-soft: #ccd1db;
-  --noir-muted: #969eac;
+  --noir-panel: #030205;
+  --noir-surface: #08060d;
+  --noir-raised: #100c18;
+  --noir-raised-hover: #191226;
+  --noir-border: rgba(190, 165, 255, 0.14);
+  --noir-border-strong: rgba(190, 165, 255, 0.24);
+  --noir-hover: rgba(169, 112, 255, 0.08);
+  --noir-active: rgba(169, 112, 255, 0.14);
+  --noir-selected: rgba(169, 112, 255, 0.22);
+  --noir-accent: #a970ff;
+  --noir-link: #c29aff;
+  --noir-link-hover: #e0ccff;
+  --noir-success: #50dea0;
+  --noir-warning: #ffd166;
+  --noir-danger: #ff6b8b;
+  --noir-text: #f8f5fc;
+  --noir-text-soft: #d9d2e3;
+  --noir-muted: #a49bab;
   --noir-shadow: 0 18px 50px rgba(0, 0, 0, 0.72);
   --noir-scrollbar-size: 8px;
-  --noir-scrollbar-thumb: #252b35;
-  --noir-scrollbar-thumb-hover: #394555;
+  --noir-scrollbar-thumb: #2d243a;
+  --noir-scrollbar-thumb-hover: #4a3862;
 }
 
 /*
@@ -51,7 +51,7 @@
   --background-base-low: var(--noir-surface) !important;
   --background-surface-high: var(--noir-raised) !important;
   --background-surface-higher: var(--noir-raised-hover) !important;
-  --background-surface-highest: #1b202a !important;
+  --background-surface-highest: #21182e !important;
   --app-frame-background: var(--noir-amoled) !important;
   --bg-base-primary: var(--noir-amoled) !important;
   --bg-base-secondary: var(--noir-panel) !important;
@@ -129,27 +129,51 @@
   --text-muted: var(--noir-muted) !important;
   --text-link: var(--noir-link) !important;
   --text-link-low-saturation: var(--noir-link-hover) !important;
+  --text-brand: var(--noir-accent) !important;
+  --text-brand-low-saturation: var(--noir-link) !important;
+  --icon-brand: var(--noir-accent) !important;
   --text-positive: var(--noir-success) !important;
   --text-warning: var(--noir-warning) !important;
   --text-danger: var(--noir-danger) !important;
   --status-positive: var(--noir-success) !important;
   --status-warning: var(--noir-warning) !important;
   --status-danger: var(--noir-danger) !important;
-  --status-positive-background: rgba(61, 220, 151, 0.14) !important;
-  --status-warning-background: rgba(255, 204, 102, 0.14) !important;
-  --status-danger-background: rgba(255, 100, 124, 0.14) !important;
-  --background-mentioned: rgba(255, 204, 102, 0.11) !important;
-  --background-mentioned-hover: rgba(255, 204, 102, 0.16) !important;
-  --channels-default: #b9bec8 !important;
-  --interactive-normal: #b9bec8 !important;
-  --interactive-hover: #eef1f6 !important;
+  --status-positive-background: rgba(80, 222, 160, 0.14) !important;
+  --status-warning-background: rgba(255, 209, 102, 0.14) !important;
+  --status-danger-background: rgba(255, 107, 139, 0.14) !important;
+  --background-mentioned: rgba(169, 112, 255, 0.13) !important;
+  --background-mentioned-hover: rgba(169, 112, 255, 0.19) !important;
+  --channels-default: #c5bed0 !important;
+  --interactive-normal: #c5bed0 !important;
+  --interactive-hover: #f1ebf8 !important;
   --interactive-active: #ffffff !important;
-  --interactive-muted: #626a77 !important;
+  --interactive-muted: #6e6578 !important;
+
+  /* Identité violette de Discord : boutons, badges et éléments de marque. */
+  --brand-360: var(--noir-link-hover) !important;
+  --brand-400: var(--noir-link) !important;
+  --brand-500: var(--noir-accent) !important;
+  --brand-500-hsl: 264 100% 72% !important;
+  --brand-560: #9557ed !important;
+  --brand-560-hsl: 265 81% 64% !important;
+  --brand-600: #8147d6 !important;
+  --brand-600-hsl: 264 64% 56% !important;
+  --brand-experiment: var(--noir-accent) !important;
+  --brand-experiment-360: var(--noir-link-hover) !important;
+  --brand-experiment-400: var(--noir-link) !important;
+  --brand-experiment-500: var(--noir-accent) !important;
+  --brand-experiment-560: #9557ed !important;
+  --brand-experiment-600: #8147d6 !important;
+  --background-brand: var(--noir-accent) !important;
+  --button-filled-brand-background: var(--noir-accent) !important;
+  --button-filled-brand-background-hover: #9557ed !important;
+  --button-filled-brand-background-active: #8147d6 !important;
+  --button-filled-brand-text: #ffffff !important;
 
   /* Contrôles */
   --button-secondary-background: var(--noir-raised-hover) !important;
-  --button-secondary-background-hover: #1d2430 !important;
-  --button-secondary-background-active: #273242 !important;
+  --button-secondary-background-hover: #22172f !important;
+  --button-secondary-background-active: #302044 !important;
   --button-secondary-text: var(--noir-text) !important;
   --scrollbar-auto-thumb: var(--noir-scrollbar-thumb) !important;
   --scrollbar-auto-track: var(--noir-amoled) !important;
@@ -247,10 +271,10 @@ body,
   opacity: 1 !important;
 }
 
-/* Liens de messages et d'embeds : bleu azur vif, sans recolorer les boutons. */
+/* Liens de messages et d'embeds : violet lavande vif, sans recolorer les boutons. */
 #app-mount :is([class*="markup_"], [class*="embed_"]) a:not([role="button"]) {
   color: var(--noir-link) !important;
-  text-decoration-color: rgba(105, 180, 255, 0.55) !important;
+  text-decoration-color: rgba(194, 154, 255, 0.6) !important;
   text-underline-offset: 2px;
 }
 
@@ -277,13 +301,13 @@ body,
 }
 
 #app-mount [class*="tooltip_"] {
-  background-color: #141923 !important;
+  background-color: #181121 !important;
   color: var(--noir-text) !important;
   border: 1px solid var(--noir-border-strong) !important;
 }
 
 #app-mount [role="tooltip"] {
-  background-color: #141923 !important;
+  background-color: #181121 !important;
   color: var(--noir-text) !important;
   border-color: var(--noir-border-strong) !important;
 }
@@ -334,11 +358,11 @@ body,
 }
 
 #app-mount [class*="replying_"] {
-  background-color: rgba(82, 168, 255, 0.1) !important;
+  background-color: rgba(169, 112, 255, 0.12) !important;
 }
 
 #app-mount [class*="mentioned_"] {
-  background-color: rgba(255, 204, 102, 0.11) !important;
+  background-color: rgba(169, 112, 255, 0.13) !important;
 }
 
 #app-mount [class*="replying_"]::before {
@@ -346,7 +370,7 @@ body,
 }
 
 #app-mount [class*="mentioned_"]::before {
-  background-color: var(--noir-warning) !important;
+  background-color: var(--noir-accent) !important;
 }
 
 /* Sélection active des salons, amis et entrées de menu. */
@@ -394,7 +418,7 @@ body,
 
 /* Lisibilité et navigation clavier. */
 #app-mount ::selection {
-  background: rgba(82, 168, 255, 0.38);
+  background: rgba(169, 112, 255, 0.42);
   color: #ffffff;
 }
 
