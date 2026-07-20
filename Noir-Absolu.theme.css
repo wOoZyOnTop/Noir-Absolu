@@ -4,7 +4,7 @@
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
  * @description Un thème Discord AMOLED local, noir profond, lisible et sans dépendance distante.
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 /*
@@ -260,13 +260,13 @@ body,
 }
 
 /* Modales et paramètres. */
-#app-mount [role="dialog"] {
+#app-mount [role="dialog"]:not([class*="positionContainer_"]) {
   background-color: var(--noir-panel) !important;
   border-color: var(--noir-border-strong) !important;
   box-shadow: var(--noir-shadow) !important;
 }
 
-#app-mount [role="dialog"] :is(
+#app-mount [role="dialog"]:not([class*="positionContainer_"]) :is(
   [class*="root_"],
   [class*="content_"],
   [class*="footer_"]
@@ -274,12 +274,8 @@ body,
   border-color: var(--noir-border) !important;
 }
 
-#app-mount [role="dialog"] [class*="footer_"] {
+#app-mount [role="dialog"]:not([class*="positionContainer_"]) [class*="footer_"] {
   background-color: var(--noir-amoled) !important;
-}
-
-#app-mount [class*="backdrop_"] {
-  background-color: rgba(0, 0, 0, 0.78) !important;
 }
 
 /* Cartes, embeds et blocs de réglages. */
