@@ -4,7 +4,7 @@
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
  * @description Un thème Discord AMOLED local, noir profond, lisible et sans dépendance distante.
- * @version 1.0.3
+ * @version 1.0.4
  */
 
 /*
@@ -13,23 +13,28 @@
  */
 :root {
   --noir-amoled: #000000;
-  --noir-panel: #030304;
-  --noir-surface: #08080a;
-  --noir-raised: #0e0e12;
-  --noir-raised-hover: #15151b;
-  --noir-border: rgba(255, 255, 255, 0.085);
-  --noir-border-strong: rgba(255, 255, 255, 0.14);
-  --noir-hover: rgba(255, 255, 255, 0.055);
-  --noir-active: rgba(255, 255, 255, 0.09);
-  --noir-selected: rgba(124, 132, 255, 0.19);
-  --noir-accent: #7c84ff;
-  --noir-text: #f3f3f5;
-  --noir-text-soft: #c7c8ce;
-  --noir-muted: #9a9da7;
+  --noir-panel: #020305;
+  --noir-surface: #07090d;
+  --noir-raised: #0d1016;
+  --noir-raised-hover: #151a22;
+  --noir-border: rgba(157, 178, 211, 0.12);
+  --noir-border-strong: rgba(157, 178, 211, 0.2);
+  --noir-hover: rgba(82, 168, 255, 0.07);
+  --noir-active: rgba(82, 168, 255, 0.12);
+  --noir-selected: rgba(82, 168, 255, 0.18);
+  --noir-accent: #52a8ff;
+  --noir-link: #69b4ff;
+  --noir-link-hover: #9ad2ff;
+  --noir-success: #3ddc97;
+  --noir-warning: #ffcc66;
+  --noir-danger: #ff647c;
+  --noir-text: #f6f7fb;
+  --noir-text-soft: #ccd1db;
+  --noir-muted: #969eac;
   --noir-shadow: 0 18px 50px rgba(0, 0, 0, 0.72);
   --noir-scrollbar-size: 8px;
-  --noir-scrollbar-thumb: #24242c;
-  --noir-scrollbar-thumb-hover: #34343e;
+  --noir-scrollbar-thumb: #252b35;
+  --noir-scrollbar-thumb-hover: #394555;
 }
 
 /*
@@ -46,7 +51,7 @@
   --background-base-low: var(--noir-surface) !important;
   --background-surface-high: var(--noir-raised) !important;
   --background-surface-higher: var(--noir-raised-hover) !important;
-  --background-surface-highest: #1b1b22 !important;
+  --background-surface-highest: #1b202a !important;
   --app-frame-background: var(--noir-amoled) !important;
   --bg-base-primary: var(--noir-amoled) !important;
   --bg-base-secondary: var(--noir-panel) !important;
@@ -122,17 +127,29 @@
   --text-secondary: var(--noir-text-soft) !important;
   --text-tertiary: var(--noir-muted) !important;
   --text-muted: var(--noir-muted) !important;
-  --text-link: #9ca7ff !important;
-  --channels-default: #b7b9c1 !important;
-  --interactive-normal: #b7bac3 !important;
-  --interactive-hover: #e5e6ea !important;
+  --text-link: var(--noir-link) !important;
+  --text-link-low-saturation: var(--noir-link-hover) !important;
+  --text-positive: var(--noir-success) !important;
+  --text-warning: var(--noir-warning) !important;
+  --text-danger: var(--noir-danger) !important;
+  --status-positive: var(--noir-success) !important;
+  --status-warning: var(--noir-warning) !important;
+  --status-danger: var(--noir-danger) !important;
+  --status-positive-background: rgba(61, 220, 151, 0.14) !important;
+  --status-warning-background: rgba(255, 204, 102, 0.14) !important;
+  --status-danger-background: rgba(255, 100, 124, 0.14) !important;
+  --background-mentioned: rgba(255, 204, 102, 0.11) !important;
+  --background-mentioned-hover: rgba(255, 204, 102, 0.16) !important;
+  --channels-default: #b9bec8 !important;
+  --interactive-normal: #b9bec8 !important;
+  --interactive-hover: #eef1f6 !important;
   --interactive-active: #ffffff !important;
-  --interactive-muted: #5e616a !important;
+  --interactive-muted: #626a77 !important;
 
   /* Contrôles */
   --button-secondary-background: var(--noir-raised-hover) !important;
-  --button-secondary-background-hover: #202028 !important;
-  --button-secondary-background-active: #292933 !important;
+  --button-secondary-background-hover: #1d2430 !important;
+  --button-secondary-background-active: #273242 !important;
   --button-secondary-text: var(--noir-text) !important;
   --scrollbar-auto-thumb: var(--noir-scrollbar-thumb) !important;
   --scrollbar-auto-track: var(--noir-amoled) !important;
@@ -230,6 +247,18 @@ body,
   opacity: 1 !important;
 }
 
+/* Liens de messages et d'embeds : bleu azur vif, sans recolorer les boutons. */
+#app-mount :is([class*="markup_"], [class*="embed_"]) a:not([role="button"]) {
+  color: var(--noir-link) !important;
+  text-decoration-color: rgba(105, 180, 255, 0.55) !important;
+  text-underline-offset: 2px;
+}
+
+#app-mount :is([class*="markup_"], [class*="embed_"]) a:not([role="button"]):hover {
+  color: var(--noir-link-hover) !important;
+  text-decoration-color: currentColor !important;
+}
+
 /* Menus, autocomplétion, sélecteurs et fenêtres flottantes. */
 #app-mount :is(
   [role="menu"],
@@ -248,13 +277,13 @@ body,
 }
 
 #app-mount [class*="tooltip_"] {
-  background-color: #17171d !important;
+  background-color: #141923 !important;
   color: var(--noir-text) !important;
   border: 1px solid var(--noir-border-strong) !important;
 }
 
 #app-mount [role="tooltip"] {
-  background-color: #17171d !important;
+  background-color: #141923 !important;
   color: var(--noir-text) !important;
   border-color: var(--noir-border-strong) !important;
 }
@@ -305,15 +334,19 @@ body,
 }
 
 #app-mount [class*="replying_"] {
-  background-color: rgba(124, 132, 255, 0.1) !important;
+  background-color: rgba(82, 168, 255, 0.1) !important;
 }
 
 #app-mount [class*="mentioned_"] {
-  background-color: rgba(250, 166, 26, 0.1) !important;
+  background-color: rgba(255, 204, 102, 0.11) !important;
 }
 
 #app-mount [class*="replying_"]::before {
   background-color: var(--noir-accent) !important;
+}
+
+#app-mount [class*="mentioned_"]::before {
+  background-color: var(--noir-warning) !important;
 }
 
 /* Sélection active des salons, amis et entrées de menu. */
@@ -361,7 +394,7 @@ body,
 
 /* Lisibilité et navigation clavier. */
 #app-mount ::selection {
-  background: rgba(124, 132, 255, 0.38);
+  background: rgba(82, 168, 255, 0.38);
   color: #ffffff;
 }
 
