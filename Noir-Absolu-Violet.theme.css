@@ -4,7 +4,7 @@
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
  * @description Thème Discord AMOLED violet, noir profond et lisible. / Readable true-black purple AMOLED Discord theme.
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 /*
@@ -354,13 +354,30 @@ body,
   [class*="accountProfileCard_"],
   [class*="messageGroupWrapper_"],
   [class*="embedFull_"],
-  [class*="connection_"],
   [class*="paymentPane_"],
   [class*="settingCard_"],
   [class*="guildContainer_"]
 ) {
   background-color: var(--noir-surface) !important;
   border-color: var(--noir-border) !important;
+}
+
+/* Panneau de connexion vocale : noir pur, sans teinte de la variante. */
+#app-mount [class*="panels_"] :is(
+  [class*="connection_"],
+  [class*="rtcConnectionStatus_"],
+  [class*="panelContainer_"]:has([class*="rtcConnectionStatus_"])
+) {
+  background: var(--noir-amoled) !important;
+  border-color: var(--noir-border) !important;
+}
+
+#app-mount [class*="panels_"] [class*="panelContainer_"]:has([class*="rtcConnectionStatus_"]) :is(
+  [class*="panelRow_"],
+  [class*="buttonSection_"],
+  [class*="rtcConnectionStatusWrapper_"]
+) {
+  background: transparent !important;
 }
 
 #app-mount [class*="markup_"] code,
