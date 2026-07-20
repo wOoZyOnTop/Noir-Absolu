@@ -1,9 +1,9 @@
 /**
- * @name Noir Absolu Violet - Absolute Black Purple
+ * @name Noir Absolu Jaune - Absolute Black Yellow
  * @author woozyfps.
  * @authorLink https://wooptimisation.pro
  * @website https://wooptimisation.pro
- * @description Thème Discord AMOLED violet, noir profond et lisible. / Readable true-black purple AMOLED Discord theme.
+ * @description Thème Discord AMOLED jaune, noir profond et lisible. / Readable true-black yellow AMOLED Discord theme.
  * @version 1.1.0
  */
 
@@ -13,19 +13,19 @@
  */
 :root {
   --noir-amoled: #000000;
-  --noir-panel: #030205;
-  --noir-surface: #08060d;
-  --noir-raised: #100c18;
-  --noir-raised-hover: #191226;
-  --noir-surface-highest: #21182e;
-  --noir-tooltip: #181121;
-  --noir-button-hover: #21182e;
-  --noir-button-active: #302044;
-  --noir-border-rgb: 190, 165, 255;
+  --noir-panel: #050502;
+  --noir-surface: #0d0c05;
+  --noir-raised: #181609;
+  --noir-raised-hover: #25220e;
+  --noir-surface-highest: #302c16;
+  --noir-tooltip: #221f0c;
+  --noir-button-hover: #302c16;
+  --noir-button-active: #463f1e;
+  --noir-border-rgb: 255, 224, 102;
   --noir-border: rgba(var(--noir-border-rgb), 0.14);
   --noir-border-strong: rgba(var(--noir-border-rgb), 0.24);
-  --noir-accent-rgb: 169, 112, 255;
-  --noir-link-rgb: 194, 154, 255;
+  --noir-accent-rgb: 242, 201, 76;
+  --noir-link-rgb: 255, 224, 102;
   --noir-link-underline-alpha: 0.60;
   --noir-reply-alpha: 0.12;
   --noir-mention-alpha: 0.13;
@@ -34,14 +34,14 @@
   --noir-hover: rgba(var(--noir-accent-rgb), 0.08);
   --noir-active: rgba(var(--noir-accent-rgb), 0.14);
   --noir-selected: rgba(var(--noir-accent-rgb), 0.22);
-  --noir-accent: #a970ff;
-  --noir-link: #c29aff;
-  --noir-link-hover: #e0ccff;
-  --noir-brand-hover: #b985ff;
-  --noir-brand-active: #9557e6;
-  --noir-brand-hsl: 264 100% 72%;
-  --noir-brand-hover-hsl: 266 100% 76%;
-  --noir-brand-active-hsl: 266 74% 62%;
+  --noir-accent: #f2c94c;
+  --noir-link: #ffe066;
+  --noir-link-hover: #fff0a3;
+  --noir-brand-hover: #ffda65;
+  --noir-brand-active: #d8ad32;
+  --noir-brand-hsl: 45 86% 62%;
+  --noir-brand-hover-hsl: 46 100% 70%;
+  --noir-brand-active-hsl: 44 68% 52%;
   --noir-on-accent: #000000;
   --noir-success: #50dea0;
   --noir-warning: #ffd166;
@@ -51,8 +51,8 @@
   --noir-muted: #9ca1ab;
   --noir-shadow: 0 18px 50px rgba(0, 0, 0, 0.72);
   --noir-scrollbar-size: 8px;
-  --noir-scrollbar-thumb: #2d243a;
-  --noir-scrollbar-thumb-hover: #4a3862;
+  --noir-scrollbar-thumb: #38351f;
+  --noir-scrollbar-thumb-hover: #5c572f;
 }
 
 /*
