@@ -1,0 +1,379 @@
+/**
+ * @name Noir Absolu
+ * @author woozyfps.
+ * @authorLink https://wooptimisation.pro
+ * @website https://wooptimisation.pro
+ * @description Un thème Discord AMOLED local, noir profond, lisible et sans dépendance distante.
+ * @version 1.0.2
+ */
+
+/*
+ * Palette centrale
+ * Modifie uniquement ces valeurs pour personnaliser le thème.
+ */
+:root {
+  --noir-amoled: #000000;
+  --noir-panel: #030304;
+  --noir-surface: #08080a;
+  --noir-raised: #0e0e12;
+  --noir-raised-hover: #15151b;
+  --noir-border: rgba(255, 255, 255, 0.085);
+  --noir-border-strong: rgba(255, 255, 255, 0.14);
+  --noir-hover: rgba(255, 255, 255, 0.055);
+  --noir-active: rgba(255, 255, 255, 0.09);
+  --noir-selected: rgba(124, 132, 255, 0.19);
+  --noir-accent: #7c84ff;
+  --noir-text: #f3f3f5;
+  --noir-text-soft: #c7c8ce;
+  --noir-muted: #9a9da7;
+  --noir-shadow: 0 18px 50px rgba(0, 0, 0, 0.72);
+  --noir-scrollbar-size: 8px;
+  --noir-scrollbar-thumb: #24242c;
+  --noir-scrollbar-thumb-hover: #34343e;
+}
+
+/*
+ * Discord répartit ses couleurs entre deux générations de variables.
+ * Les deux sont définies pour rester compatible avec Dark, Darker et Onyx.
+ */
+:is(.theme-dark, .theme-darker, .theme-midnight, .theme-light),
+#app-mount {
+  color-scheme: dark;
+
+  /* Surfaces modernes */
+  --background-base-lowest: var(--noir-amoled) !important;
+  --background-base-lower: var(--noir-panel) !important;
+  --background-base-low: var(--noir-surface) !important;
+  --background-surface-high: var(--noir-raised) !important;
+  --background-surface-higher: var(--noir-raised-hover) !important;
+  --background-surface-highest: #1b1b22 !important;
+  --app-frame-background: var(--noir-amoled) !important;
+  --bg-base-primary: var(--noir-amoled) !important;
+  --bg-base-secondary: var(--noir-panel) !important;
+  --bg-base-tertiary: var(--noir-surface) !important;
+  --bg-surface-overlay: var(--noir-raised) !important;
+  --bg-surface-raised: var(--noir-raised) !important;
+  --bg-surface-overlay-tmp: var(--noir-raised) !important;
+
+  /* Surfaces historiques encore utilisées par certains écrans/plugins */
+  --background-primary: var(--noir-amoled) !important;
+  --background-secondary: var(--noir-panel) !important;
+  --background-secondary-alt: var(--noir-surface) !important;
+  --background-tertiary: var(--noir-amoled) !important;
+  --background-accent: var(--noir-raised-hover) !important;
+  --background-floating: var(--noir-raised) !important;
+  --background-nested-floating: var(--noir-surface) !important;
+  --background-mobile-primary: var(--noir-amoled) !important;
+  --background-mobile-secondary: var(--noir-panel) !important;
+  --home-background: var(--noir-amoled) !important;
+  --chat-background-default: var(--noir-amoled) !important;
+  --channel-background-default: var(--noir-panel) !important;
+  --custom-channel-members-bg: var(--noir-panel) !important;
+  --activity-card-background: var(--noir-surface) !important;
+  --card-background-default: var(--noir-surface) !important;
+  --modal-background: var(--noir-panel) !important;
+  --modal-footer-background: var(--noir-amoled) !important;
+  --channeltextarea-background: var(--noir-surface) !important;
+  --input-background: var(--noir-surface) !important;
+  --input-background-default: var(--noir-surface) !important;
+  --input-border: var(--noir-border) !important;
+  --embed-background: var(--noir-surface) !important;
+  --embed-background-alternate: var(--noir-raised) !important;
+  --background-code: var(--noir-surface) !important;
+  --deprecated-card-bg: var(--noir-surface) !important;
+  --deprecated-store-bg: var(--noir-amoled) !important;
+  --deprecated-text-input-bg: var(--noir-surface) !important;
+  --deprecated-text-input-border: var(--noir-border) !important;
+
+  /* États interactifs */
+  --background-mod-muted: rgba(255, 255, 255, 0.035) !important;
+  --background-mod-subtle: var(--noir-hover) !important;
+  --background-mod-normal: var(--noir-active) !important;
+  --background-mod-strong: rgba(255, 255, 255, 0.13) !important;
+  --background-modifier-hover: var(--noir-hover) !important;
+  --background-modifier-active: var(--noir-active) !important;
+  --background-modifier-selected: var(--noir-selected) !important;
+  --background-modifier-accent: var(--noir-border) !important;
+  --interactive-background-hover: var(--noir-hover) !important;
+  --interactive-background-active: var(--noir-active) !important;
+  --interactive-background-selected: var(--noir-selected) !important;
+  --message-background-hover: rgba(255, 255, 255, 0.032) !important;
+  --message-background-hover-default: rgba(255, 255, 255, 0.032) !important;
+
+  /* Bordures et ombres */
+  --border-muted: rgba(255, 255, 255, 0.055) !important;
+  --border-subtle: var(--noir-border) !important;
+  --border-normal: var(--noir-border-strong) !important;
+  --border-strong: rgba(255, 255, 255, 0.2) !important;
+  --app-frame-border: var(--noir-border) !important;
+  --__header-bar-background: var(--noir-amoled) !important;
+  --elevation-low: 0 1px 0 var(--noir-border) !important;
+  --elevation-medium: var(--noir-shadow) !important;
+  --elevation-high: var(--noir-shadow) !important;
+  --legacy-elevation-low: 0 1px 0 var(--noir-border) !important;
+  --legacy-elevation-high: var(--noir-shadow) !important;
+
+  /* Texte */
+  --header-primary: var(--noir-text) !important;
+  --header-secondary: var(--noir-text-soft) !important;
+  --text-normal: var(--noir-text) !important;
+  --text-default: var(--noir-text) !important;
+  --text-primary: var(--noir-text) !important;
+  --text-secondary: var(--noir-text-soft) !important;
+  --text-tertiary: var(--noir-muted) !important;
+  --text-muted: var(--noir-muted) !important;
+  --text-link: #9ca7ff !important;
+  --channels-default: #b7b9c1 !important;
+  --interactive-normal: #b7bac3 !important;
+  --interactive-hover: #e5e6ea !important;
+  --interactive-active: #ffffff !important;
+  --interactive-muted: #5e616a !important;
+
+  /* Contrôles */
+  --button-secondary-background: var(--noir-raised-hover) !important;
+  --button-secondary-background-hover: #202028 !important;
+  --button-secondary-background-active: #292933 !important;
+  --button-secondary-text: var(--noir-text) !important;
+  --scrollbar-auto-thumb: var(--noir-scrollbar-thumb) !important;
+  --scrollbar-auto-track: var(--noir-amoled) !important;
+  --scrollbar-thin-thumb: var(--noir-scrollbar-thumb) !important;
+  --scrollbar-thin-track: transparent !important;
+  --scrollbar-auto-scrollbar-color-thumb: var(--noir-scrollbar-thumb) !important;
+  --scrollbar-auto-scrollbar-color-track: var(--noir-amoled) !important;
+}
+
+/* Fond racine : empêche un flash gris pendant les changements d'écran. */
+html,
+body,
+#app-mount {
+  background: var(--noir-amoled) !important;
+}
+
+/* Écrans principaux. Les noms fonctionnels résistent aux suffixes hashés. */
+#app-mount :is(
+  [class*="chatContent_"],
+  [class*="contentRegion_"],
+  [class*="contentRegionScroller_"],
+  [class*="standardSidebarView_"],
+  [class*="peopleColumn_"],
+  [class*="nowPlayingColumn_"],
+  [class*="tabBody_"],
+  [class*="applicationStore_"],
+  [class*="mainPageScroller_"],
+  [class*="shopScroll_"],
+  [class*="pageContainer_"],
+  [class*="noChannel_"],
+  [class*="emptyPage_"],
+  [class*="emptySearchWrapper_"]
+) {
+  background-color: var(--noir-amoled) !important;
+}
+
+#app-mount [data-list-id="chat-messages"] {
+  background-color: var(--noir-amoled) !important;
+}
+
+/* Colonnes latérales : toujours noires, avec juste assez de séparation. */
+#app-mount :is(
+  [class*="guilds_"],
+  [class*="sidebar_"],
+  [class*="sidebarRegionScroller_"],
+  [class*="privateChannels_"],
+  [class*="membersWrap_"],
+  [class*="members_"],
+  [class*="panels_"]
+) {
+  background-color: var(--noir-panel) !important;
+  border-color: var(--noir-border) !important;
+}
+
+#app-mount [data-list-id="guildsnav"] {
+  background-color: var(--noir-panel) !important;
+}
+
+/* Barre supérieure et séparateurs de structure. */
+#app-mount :is(
+  [class*="container_"][class*="themed_"],
+  [class*="titleContainer_"],
+  [class*="headerBar_"],
+  [class*="tabBar_"]
+) {
+  background-color: var(--noir-amoled) !important;
+  border-color: var(--noir-border) !important;
+}
+
+/* Zone de saisie, recherche et champs. */
+#app-mount :is(
+  [class*="scrollableContainer_"],
+  [class*="themedBackground_"],
+  [class*="searchBar_"],
+  [class*="searchBarComponent_"]
+) {
+  background-color: var(--noir-surface) !important;
+  border-color: var(--noir-border) !important;
+}
+
+#app-mount [class*="scrollableContainer_"] {
+  border: 1px solid var(--noir-border) !important;
+  box-shadow: none !important;
+}
+
+#app-mount input,
+#app-mount textarea {
+  color: var(--noir-text) !important;
+  caret-color: var(--noir-accent) !important;
+}
+
+#app-mount input::placeholder,
+#app-mount textarea::placeholder {
+  color: var(--noir-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Menus, autocomplétion, sélecteurs et fenêtres flottantes. */
+#app-mount :is(
+  [role="menu"],
+  [role="listbox"],
+  [class*="menu_"],
+  [class*="autocomplete_"],
+  [class*="messagesPopoutWrap_"],
+  [class*="contentWrapper_"],
+  [class*="popoutList_"],
+  [class*="quickSelectPopout_"],
+  [class*="browser_"]
+) {
+  background-color: var(--noir-raised) !important;
+  border-color: var(--noir-border-strong) !important;
+  box-shadow: var(--noir-shadow) !important;
+}
+
+#app-mount [class*="tooltip_"] {
+  background-color: #17171d !important;
+  color: var(--noir-text) !important;
+  border: 1px solid var(--noir-border-strong) !important;
+}
+
+#app-mount [role="tooltip"] {
+  background-color: #17171d !important;
+  color: var(--noir-text) !important;
+  border-color: var(--noir-border-strong) !important;
+}
+
+/* Modales et paramètres. */
+#app-mount [role="dialog"] {
+  background-color: var(--noir-panel) !important;
+  border-color: var(--noir-border-strong) !important;
+  box-shadow: var(--noir-shadow) !important;
+}
+
+#app-mount [role="dialog"] :is(
+  [class*="root_"],
+  [class*="content_"],
+  [class*="footer_"]
+) {
+  border-color: var(--noir-border) !important;
+}
+
+#app-mount [role="dialog"] [class*="footer_"] {
+  background-color: var(--noir-amoled) !important;
+}
+
+#app-mount [class*="backdrop_"] {
+  background-color: rgba(0, 0, 0, 0.78) !important;
+}
+
+/* Cartes, embeds et blocs de réglages. */
+#app-mount :is(
+  [class*="accountProfileCard_"],
+  [class*="messageGroupWrapper_"],
+  [class*="embedFull_"],
+  [class*="connection_"],
+  [class*="paymentPane_"],
+  [class*="settingCard_"],
+  [class*="guildContainer_"]
+) {
+  background-color: var(--noir-surface) !important;
+  border-color: var(--noir-border) !important;
+}
+
+#app-mount [class*="markup_"] code,
+#app-mount pre {
+  background-color: var(--noir-surface) !important;
+  border-color: var(--noir-border) !important;
+}
+
+/* Messages survolés, réponses et mentions : visibles sans voile gris. */
+#app-mount [class*="messageListItem_"] [class*="message_"]:hover,
+#app-mount [class*="message_"][class*="selected_"] {
+  background-color: var(--noir-hover) !important;
+}
+
+#app-mount [class*="replying_"] {
+  background-color: rgba(124, 132, 255, 0.1) !important;
+}
+
+#app-mount [class*="mentioned_"] {
+  background-color: rgba(250, 166, 26, 0.1) !important;
+}
+
+#app-mount [class*="replying_"]::before {
+  background-color: var(--noir-accent) !important;
+}
+
+/* Sélection active des salons, amis et entrées de menu. */
+#app-mount :is(
+  [class*="modeSelected_"],
+  [class*="selected_"][role="listitem"],
+  [class*="item_"][aria-selected="true"]
+) {
+  background-color: var(--noir-selected) !important;
+}
+
+/* Scrollbars sobres, mais encore faciles à saisir. */
+#app-mount * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--noir-scrollbar-thumb) transparent;
+}
+
+#app-mount ::-webkit-scrollbar {
+  width: var(--noir-scrollbar-size) !important;
+  height: var(--noir-scrollbar-size) !important;
+}
+
+#app-mount ::-webkit-scrollbar-track,
+#app-mount ::-webkit-scrollbar-track-piece {
+  background: transparent !important;
+}
+
+#app-mount ::-webkit-scrollbar-thumb {
+  background: var(--noir-scrollbar-thumb) !important;
+  border: 2px solid transparent !important;
+  background-clip: padding-box !important;
+  border-radius: 999px !important;
+}
+
+#app-mount ::-webkit-scrollbar-thumb:hover {
+  background: var(--noir-scrollbar-thumb-hover) !important;
+  background-clip: padding-box !important;
+}
+
+#app-mount ::-webkit-scrollbar-button,
+#app-mount ::-webkit-scrollbar-corner {
+  display: none !important;
+  background: transparent !important;
+}
+
+/* Lisibilité et navigation clavier. */
+#app-mount ::selection {
+  background: rgba(124, 132, 255, 0.38);
+  color: #ffffff;
+}
+
+#app-mount :focus-visible {
+  outline-color: var(--noir-accent) !important;
+}
+
+/* Aucun filtre sur les photos, vidéos, avatars ou bannières. */
+#app-mount :is(img, video, canvas) {
+  filter: none;
+}
