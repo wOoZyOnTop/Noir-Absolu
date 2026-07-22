@@ -2,46 +2,52 @@
  * @name Noir Absolu Rose - Absolute Black Pink
  * @author woozyfps.
  * @authorLink https://wooptimisation.pro
- * @website https://wooptimisation.pro
- * @description Thème Discord AMOLED rose, noir profond et lisible. / Readable true-black pink AMOLED Discord theme.
- * @version 1.1.2
+ * @website https://woozyontop.github.io/Noir-Absolu-Theme/
+ * @source https://woozyontop.github.io/Noir-Absolu-Theme/presets/Noir-Absolu-Rose.css
+ * @description True-black AMOLED Discord theme with the pink accent preset. / Thème Discord AMOLED noir profond avec le préréglage rose.
+ * @version 1.3.2
  */
 
 /*
- * Palette centrale
- * Modifie uniquement ces valeurs pour personnaliser le thème.
+ * Accent / Couleur d'accentuation
+ * Change only these three values. Presets are documented in the README.
+ * Modifiez uniquement ces trois valeurs. Les préréglages sont dans le README.
  */
 :root {
+  --noir-accent-hue: 329;
+  --noir-accent-saturation: 100%;
+  --noir-accent-lightness: 69%;
+
+  /* Core palette / Palette principale */
+  --noir-accent-hsl: var(--noir-accent-hue) var(--noir-accent-saturation) var(--noir-accent-lightness);
+  --noir-link-hsl: var(--noir-accent-hue) 100% 80%;
+  --noir-brand-hover-hsl: var(--noir-accent-hue) 100% 76%;
+  --noir-brand-active-hsl: var(--noir-accent-hue) 74% 62%;
   --noir-amoled: #000000;
-  --noir-panel: #050204;
-  --noir-surface: #0d060a;
-  --noir-raised: #180a13;
-  --noir-raised-hover: #25101e;
-  --noir-surface-highest: #301628;
-  --noir-tooltip: #220f1c;
-  --noir-button-hover: #301628;
-  --noir-button-active: #461f3a;
-  --noir-border-rgb: 255, 145, 208;
-  --noir-border: rgba(var(--noir-border-rgb), 0.14);
-  --noir-border-strong: rgba(var(--noir-border-rgb), 0.24);
-  --noir-accent-rgb: 255, 95, 178;
-  --noir-link-rgb: 255, 145, 208;
+  --noir-panel: #020202;
+  --noir-surface: #070709;
+  --noir-raised: #0d0d11;
+  --noir-raised-hover: #15151b;
+  --noir-surface-highest: #1c1c24;
+  --noir-tooltip: #141419;
+  --noir-button-hover: #202028;
+  --noir-button-active: #2b2b36;
+  --noir-border: hsl(var(--noir-accent-hue) 60% 82% / 0.14);
+  --noir-border-strong: hsl(var(--noir-accent-hue) 70% 82% / 0.24);
   --noir-link-underline-alpha: 0.60;
   --noir-reply-alpha: 0.12;
   --noir-mention-alpha: 0.13;
   --noir-mention-hover-alpha: 0.19;
   --noir-selection-alpha: 0.42;
-  --noir-hover: rgba(var(--noir-accent-rgb), 0.08);
-  --noir-active: rgba(var(--noir-accent-rgb), 0.14);
-  --noir-selected: rgba(var(--noir-accent-rgb), 0.22);
-  --noir-accent: #ff5fb2;
-  --noir-link: #ff91d0;
-  --noir-link-hover: #ffc0e4;
-  --noir-brand-hover: #ff7fc2;
-  --noir-brand-active: #e7479c;
-  --noir-brand-hsl: 329 100% 69%;
-  --noir-brand-hover-hsl: 329 100% 75%;
-  --noir-brand-active-hsl: 328 77% 59%;
+  --noir-hover: hsl(var(--noir-accent-hsl) / 0.08);
+  --noir-active: hsl(var(--noir-accent-hsl) / 0.14);
+  --noir-selected: hsl(var(--noir-accent-hsl) / 0.22);
+  --noir-accent: hsl(var(--noir-accent-hsl));
+  --noir-link: hsl(var(--noir-link-hsl));
+  --noir-link-hover: hsl(var(--noir-accent-hue) 100% 90%);
+  --noir-brand-hover: hsl(var(--noir-brand-hover-hsl));
+  --noir-brand-active: hsl(var(--noir-brand-active-hsl));
+  --noir-brand-hsl: var(--noir-accent-hsl);
   --noir-on-accent: #000000;
   --noir-success: #50dea0;
   --noir-warning: #ffd166;
@@ -51,8 +57,8 @@
   --noir-muted: #9ca1ab;
   --noir-shadow: 0 18px 50px rgba(0, 0, 0, 0.72);
   --noir-scrollbar-size: 8px;
-  --noir-scrollbar-thumb: #3a2130;
-  --noir-scrollbar-thumb-hover: #61364f;
+  --noir-scrollbar-thumb: hsl(var(--noir-accent-hue) 18% 18%);
+  --noir-scrollbar-thumb-hover: hsl(var(--noir-accent-hue) 28% 30%);
 }
 
 /*
@@ -159,8 +165,8 @@
   --status-positive-background: rgba(80, 222, 160, 0.14) !important;
   --status-warning-background: rgba(255, 209, 102, 0.14) !important;
   --status-danger-background: rgba(255, 107, 139, 0.14) !important;
-  --background-mentioned: rgba(var(--noir-accent-rgb), var(--noir-mention-alpha)) !important;
-  --background-mentioned-hover: rgba(var(--noir-accent-rgb), var(--noir-mention-hover-alpha)) !important;
+  --background-mentioned: hsl(var(--noir-accent-hsl) / var(--noir-mention-alpha)) !important;
+  --background-mentioned-hover: hsl(var(--noir-accent-hsl) / var(--noir-mention-hover-alpha)) !important;
   --channels-default: #bec2cb !important;
   --interactive-normal: #bec2cb !important;
   --interactive-hover: #eef0f4 !important;
@@ -297,7 +303,7 @@ body,
 /* Liens de messages et d'embeds : couleur vive, sans recolorer les boutons. */
 #app-mount :is([class*="markup_"], [class*="embed_"]) a:not([role="button"]) {
   color: var(--noir-link) !important;
-  text-decoration-color: rgba(var(--noir-link-rgb), var(--noir-link-underline-alpha)) !important;
+  text-decoration-color: hsl(var(--noir-link-hsl) / var(--noir-link-underline-alpha)) !important;
   text-underline-offset: 2px;
 }
 
@@ -398,11 +404,11 @@ body,
 }
 
 #app-mount [class*="replying_"] {
-  background-color: rgba(var(--noir-accent-rgb), var(--noir-reply-alpha)) !important;
+  background-color: hsl(var(--noir-accent-hsl) / var(--noir-reply-alpha)) !important;
 }
 
 #app-mount [class*="mentioned_"] {
-  background-color: rgba(var(--noir-accent-rgb), var(--noir-mention-alpha)) !important;
+  background-color: hsl(var(--noir-accent-hsl) / var(--noir-mention-alpha)) !important;
 }
 
 #app-mount [class*="replying_"]::before {
@@ -458,15 +464,19 @@ body,
 
 /* Lisibilité et navigation clavier. */
 #app-mount ::selection {
-  background: rgba(var(--noir-accent-rgb), var(--noir-selection-alpha));
+  background: hsl(var(--noir-accent-hsl) / var(--noir-selection-alpha));
   color: #ffffff;
 }
 
 #app-mount :focus-visible {
-  outline-color: var(--noir-accent) !important;
+  outline: 2px solid var(--noir-accent) !important;
+  outline-offset: 2px !important;
 }
 
-/* Aucun filtre sur les photos, vidéos, avatars ou bannières. */
-#app-mount :is(img, video, canvas) {
-  filter: none;
+/* L'éditeur Slate rogne son contour de focus et n'en laisse voir que deux barres verticales. */
+#app-mount :is(
+  [data-slate-editor="true"],
+  [contenteditable="true"][role="textbox"]
+):focus-visible {
+  outline: none !important;
 }
